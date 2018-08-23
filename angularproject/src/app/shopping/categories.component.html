@@ -1,0 +1,26 @@
+<h4>Category List</h4>
+<form>
+
+<input placeholder="CatergoryId" readonly [(ngModel)]="frmCategory.id" name="txtId">&nbsp;
+<input placeholder="Enter Category Name"  [(ngModel)]="frmCategory.name" name="txtName">&nbsp;
+<button class="btn btn-info" (click)="addCategory()">Add</button> &nbsp;
+<button class="btn btn-primary" (click)="UpdateCategory()">Update</button>
+</form>
+
+
+<table class="table thead-dark table-bordered">
+    <tr>
+     <th>Id</th> <th>Name</th> <th>Action</th>
+     </tr> 
+     <tr *ngIf="categories.length == 0">
+        <th colspan="4">No Categories to display</th>
+     </tr>
+     <tr *ngFor ="let category of categories">
+        <td>{{category.id}}</td>
+        <td>{{category.name}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCategory(category.id)">Delete</button>&nbsp;
+        <button class="btn btn-success" (click)="EditCategory(category)">Edit</button></td>
+    </tr>
+    
+ </table>
+    

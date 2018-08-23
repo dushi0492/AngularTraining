@@ -1,0 +1,16 @@
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+  
+<a href="../assets/site-logo.png"  class="navbar-brand " >
+    <img src="../assets/site-logo.png" style="width: 40px">{{appTitle}}</a>
+    <ul class="nav navbar-nav mr-auto">
+     <li class="active"><a class="nav-link" routerLink="/">Home</a></li>
+     <li class="nav-item"><a class="nav-link" routerLink="/signin">Sign In</a></li>
+     <li class="nav-item"><a class="nav-link" routerLink="/signup">Quick Sign Up</a></li>
+     <li class="nav-item"><a class="nav-link" routerLink="/list">Shopping</a></li>
+     <li class="nav-item"><a class="nav-link" routerLink="/manage">Manage Products</a></li>
+     <li class="nav-item"><a class="nav-link" routerLink="/categories">Categories</a></li>
+    </ul>
+ <span class="navbar-text text-white">Welcome <b>{{showUserName()}}</b></span>   
+
+</nav>
+

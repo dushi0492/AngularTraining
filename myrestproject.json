@@ -1,0 +1,60 @@
+{
+  "wscategories": [
+    {
+      "id": 1,
+      "name": "Mobiles"
+    },
+    {
+      "id": 2,
+      "name": "Laptops"
+    },
+    {
+      "id": 4,
+      "name": "HomeAppliances"
+    }
+  ],
+  "wsproducts": [
+    {
+      "id": 1,
+      "name": "Galaxy S",
+      "price": 34000,
+      "description": "SamSung Mobile",
+      "ctgid": 1
+    },
+    {
+      "id": 2,
+      "name": "Iphone",
+      "price": 48000,
+      "description": "Apple Mobile",
+      "ctgid": 1
+    },
+    {
+      "id": 3,
+      "name": "Mi 6",
+      "price": 16000,
+      "description": "Redmi Mobile",
+      "ctgid": 1
+    },
+    {
+      "id": 4,
+      "name": "Bravia",
+      "price": 72000,
+      "description": "Sony",
+      "ctgid": 2
+    },
+    {
+      "id": 5,
+      "name": "Yoga",
+      "price": 54000,
+      "description": "LG",
+      "ctgid": 2
+    },
+    {
+      "id": 6,
+      "name": "Latitude",
+      "price": 120000,
+      "description": "Dell",
+      "ctgid": 2
+    }
+  ]
+}

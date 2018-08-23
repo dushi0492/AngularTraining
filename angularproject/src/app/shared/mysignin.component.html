@@ -1,0 +1,21 @@
+<h3>{{title}}</h3>
+        <!-- <form>
+        userName: <input type="text" placeholder="Example@abc.com" #frmuser>
+        <br>
+        Password: <input type="password" placeholder="****" #frmPwd>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="handleButtonClick(frmuser.value,frmPwd.value)" >{{title}}</button>
+        </form> -->
+        <form novalidate [formGroup]="myform">
+          userName: <input type="text" placeholder="Example@google.com" formControlName="mname" required> 
+          <b style="color:red" *ngIf="myform.controls.mname.invalid && myform.controls.mname.dirty "> User Name is Required</b>
+          <br>
+          Password: <input type="password" placeholder="****" formControlName="mpwd" required minlength="3"> 
+          <b style="color:red" *ngIf="myform.controls.mpwd.invalid && myform.controls.mpwd.dirty ">
+            <span *ngIf="myform.controls.mpwd.errors.required">Password is required</span>      
+            <span *ngIf="myform.controls.mpwd.errors.minlength">Password should have 3 characters</span>  
+          </b>
+          <br>
+          <button type="button" class="btn btn-primary" (click)="handleButtonClick()" >{{title}}</button>
+        </form>
+        <pre>{{myform.value | json }} </pre>

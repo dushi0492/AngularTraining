@@ -1,0 +1,16 @@
+<h4>List Of Products</h4>
+
+<div class="card-columns">
+         <div *ngFor ="let product of products" class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-header bg-dark text-white">
+                 <b> {{product.name}}</b>
+                </div>
+                <div class="card-body">
+                    Price:{{product.price}}
+                  <br> Descripton: {{product.description}}
+                </div>
+                <div class="card-footer">
+                <button type="button" class="btn btn-success" (click)="addToCart(product)" >Add to Cart</button>
+                </div>
+        </div>
+</div> 

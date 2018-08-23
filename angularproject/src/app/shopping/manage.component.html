@@ -1,0 +1,19 @@
+<h4>Manage Product--{{mydate | date:"MM/dd/yyyy"}}</h4>
+<form>
+    Search: <input [(ngModel)]="queryString" name="txtSearch">
+</form>
+<table class="table thead-dark table-bordered">
+    <tr>
+     <th>Id</th> <th>Name</th>  <th>Price</th> <th>Description</th>
+     </tr> 
+     <tr *ngIf="mgproducts.length == 0">
+        <th colspan="4">No Products to display</th>
+     </tr>
+     <tr *ngFor ="let product of mgproducts | filterdata:queryString:'name'">
+        <td>{{product.id}}</td>
+        <td>{{product.name | uppercase}}</td>
+        <td>{{product.price | currency:'INR' }}</td>
+        <td>{{product.description}}</td>
+     </tr>
+ </table>
+    
